@@ -63,9 +63,9 @@ const FeatureSections = ({ className }: { className?: string }) => {
               <span className="text-blue-600">{section.highlight}</span>
             </h2>
             <p className="text-lg text-gray-600 mb-6">{section.description}</p>
-            <ul className="list-disc pl-6 text-gray-600 space-y-2">
+            <ul className="pl-6 text-gray-600 space-y-2">
               {section.bullets.map((bullet, i) => (
-                <li key={i}>{bullet}</li>
+                <li key={i}> <span className="text-primary">&#10003;</span> {bullet}</li>
               ))}
             </ul>
           </div>
