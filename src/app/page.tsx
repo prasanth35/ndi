@@ -1,23 +1,22 @@
+import { Fragment } from "react";
+import dynamic from "next/dynamic";
 import PaddingContainer from "@/components/common/paddingContainer";
-import Faq from "@/components/home/faq";
-import Features from "@/components/home/features";
 import Hero from "@/components/home/hero";
 import PartnerLogo from "@/components/home/partnerLogo";
+import Features from "@/components/home/features";
 import PopularSection from "@/components/home/Popular";
 import Services from "@/components/home/services";
-import Testimonials from "@/components/home/testimonials";
-import UnlockPath from "@/components/home/unlockPath";
-import { Fragment } from "react";
+const Testimonials = dynamic(() => import("@/components/home/testimonials"));
+const Faq = dynamic(() => import("@/components/home/faq"));
+const UnlockPath = dynamic(() => import("@/components/home/unlockPath"));
 
 export default function Home() {
   return (
     <Fragment>
       <PaddingContainer>
-        <Hero className=" mt-4 sm:mt-12" />
+        <Hero />
       </PaddingContainer>
-      <PaddingContainer>
-        <PartnerLogo className="mt-14" />
-      </PaddingContainer>
+        <PartnerLogo/>
       <PaddingContainer>
         <Features className="mt-10" />
       </PaddingContainer>
@@ -27,7 +26,7 @@ export default function Home() {
       <PaddingContainer>
         <Services className="mb-14" />
       </PaddingContainer>
-        <Testimonials />
+      <Testimonials />
       <PaddingContainer>
         <Faq />
       </PaddingContainer>

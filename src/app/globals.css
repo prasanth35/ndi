@@ -66,6 +66,15 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  .grid-container {
+    width: 100%;
+    height: 100%;
+    background-color: #D1ECFE ;
+    background-image: linear-gradient(284.07deg, #D1ECFE 42.03%, #E3F4FF 163.98%);
+    background-size: 100px 100px;
+  }
+
+
 }
 
 @layer base {

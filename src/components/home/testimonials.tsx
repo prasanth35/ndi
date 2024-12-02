@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardFooter, CardHeader } from "../ui/card";
 
 const Testimonials = ({className}:{className?:string}) => {
   const testimonials = [
@@ -26,7 +26,7 @@ const Testimonials = ({className}:{className?:string}) => {
   ];
 
   return (
-    <section className={cn([" bg-blue-50 py-16",className])}>
+    <section id="testimonials" className={cn([" bg-blue-50 py-16",className])}>
       <div className="px-6 lg:px-12 text-center">
         <Badge variant={'outline'} className="bg-white">
         <Badge className="bg-secondary rounded-full px-1 py-1"/> &nbsp; Testimonials 

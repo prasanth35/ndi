@@ -47,16 +47,16 @@ const FeatureSections = ({ className }: { className?: string }) => {
   ];
 
   return (
-    <div className={cn([className])}>
+    <div id="features" className={cn([className,"items-center flex flex-col"])}>
       {sections.map((section, index) => (
         <section
           key={section.id}
           id={section.id}
-          className={`grid grid-cols-1 sm:grid-cols-2 items-center mb-10`}
+          className={`grid grid-cols-1 sm:grid-cols-2 items-center mb-10 gap-5`}
         >
           <div className={`w-full order-1 sm:order-${index % 2 === 0 ? '1' : '2'}`}>
             <Badge variant={"outline"} className="bg-white mb-4">
-              <Image alt="" src={"/assets/svg/Union.svg"} height={20} width={20} /> &nbsp; {section.id.toUpperCase()}
+              <Image alt="" src={"/assets/svg/union.svg"} height={20} width={20} /> &nbsp; {section.id.toUpperCase()}
             </Badge>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               {section.title}{" "}

@@ -6,11 +6,11 @@ import { cn } from '@/lib/utils'
 const Hero = ({ className }: { className?: string }) => {
   return (
     <section className={cn([className])}>
-      <div className="absolute inset-0 -z-10 h-full w-full bg-[url('/assets/png/Background.png')]">
+      <div className="absolute inset-0 -z-10 h-screen w-full bg-[url('/assets/svg/herobg.svg')]">
       </div>
+      
       <div className='flex flex-col items-center text-center'>
-
-        <h1 className=" text-4xl font-extrabold text-gray-900 leading-tight lg:text-5xl">
+        <h1 className="text-4xl font-extrabold text-gray-900 leading-tight lg:text-5xl">
           Empower Your Learning Journey with the <br />
           <span className="text-blue-600">National Defense Academy</span>
         </h1>
@@ -30,16 +30,23 @@ const Hero = ({ className }: { className?: string }) => {
           </Button>
         </div>
       </div>
-      <div className="w-full h-full">
-        <Image
-          src="/assets/png/hero1.png"
-          alt="Hero"
-          layout="responsive"
-          width={1920}
-          height={1080}
-          objectFit="contain"
-          priority
-        />
+
+      {/* Hero Image with Fading Effect */}
+      <div className="relative w-full h-full">
+        <div className="wrapper">
+          <div className="imgwrap">
+            <Image
+              src="/assets/png/hero1.png"
+              alt="Hero"
+              layout="responsive"
+              width={1920}
+              height={1080}
+              objectFit="contain"
+              priority
+            />
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
       </div>
     </section>
   )

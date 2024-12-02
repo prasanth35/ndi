@@ -12,19 +12,19 @@ const NavBar = () => {
             name: "About"
         },
         {
-            route: "/features",
+            route: "#features",
             name: "Features"
         },
         {
-            route: "/services",
+            route: "#services",
             name: "Services"
         },
         {
-            route: '/testimonials',
+            route: '#testimonials',
             name: "Testimonials"
         },
         {
-            route: "/faq",
+            route: "#faq",
             name: "FAQ"
         }
     ]

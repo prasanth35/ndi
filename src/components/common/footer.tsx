@@ -51,30 +51,34 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="px-6 py-8">
-      <div className="flex flex-wrap justify-between gap-8 flex-col-reverse md:flex-col">
-        <div className="max-w-sm">
-          <Image
-            src="/assets/svg/logo.svg"
-            alt="Logo"
-            width={150}
-            height={50}
-          />
-          <div className="mt-4">
-            <p className="font-semibold">Offices</p>
-            <p>Indonesia, 23 Finance Avenue, Suite 456, Business City</p>
-            <br/>
-            <p>USA, 23 Finance Avenue, Suite 456, Business City</p>
-            <p className="mt-4 font-semibold">Drop us a line</p>
-            <a
-              href="mailto:info@magnolia.finance"
-              className="text-blue-600 hover:underline"
-            >
-              info@magnolia.finance
-            </a>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="order-2 md:order-1">
+          <div className="max-w-sm">
+            <Image
+              src="/assets/svg/logo.svg"
+              alt="Logo"
+              width={150}
+              height={50}
+            />
+            <div className="mt-4">
+              <p className="font-semibold">Offices</p>
+              <p>Indonesia, 23 Finance Avenue,</p>
+              <p>Suite 456, Business City</p>
+              <br />
+              <p>USA, 23 Finance Avenue, Suite</p>
+              <p>456, Business City</p>
+              <p className="mt-4 font-semibold">Drop us a line</p>
+              <a
+                href="mailto:info@magnolia.finance"
+                className="text-blue-600 hover:underline"
+              >
+                info@magnolia.finance
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-8 justify-between w-full md:w-auto">
+        <div className="order-1 md:order-2 flex flex-wrap gap-8 justify-between">
           {Object.entries(data).map(([key, links]) => (
             <div key={key} className="min-w-[150px]">
               <p className="font-semibold mb-3">
@@ -96,8 +100,6 @@ const Footer: React.FC = () => {
           ))}
         </div>
       </div>
-
-      {/* Bottom Section - Social Media */}
       <div className="mt-8 border-t border-gray-300 pt-4 flex flex-col md:flex-row justify-between items-center">
         <p className="text-sm text-gray-500">© 2024, Magnolia</p>
         <div className="flex gap-4 mt-4 md:mt-0">
@@ -120,3 +122,7 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
+
+
+{/*  */}

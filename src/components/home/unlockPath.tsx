@@ -5,8 +5,8 @@ import { cn } from '@/lib/utils'
 
 const UnlockPath = ({className}:{className?:string}) => {
     return (
-        <section className={cn(["w-full",className])}>
-            <div className='grid grid-cols-1 md:grid-cols-2 p-8'>
+        <section id='future-path' className={cn(["w-full",className])}>
+            <div className='grid grid-cols-1 md:grid-cols-2 p-8 grid-container rounded-lg'>
                 <div>
                     <h1 className='text-3xl font-semibold'>Unlock Your Path to Financial Success</h1>
                     <br/>

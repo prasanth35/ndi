@@ -52,7 +52,7 @@ const Faq: React.FC = ({className}:{className?:string}) => {
   ];
 
   return (
-    <div className={cn([className])}>
+    <div id="faq" className={cn([className])}>
       <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
       <Accordion type='single' collapsible className='w-full'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
